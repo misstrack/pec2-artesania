@@ -1,0 +1,19 @@
+@use "sass:color";
+
+@function tint($color, $amount) {
+  @return color.scale($color, $lightness: $amount);
+}
+
+@function to-srgb($color) {
+  @return color.to-space($color, srgb);
+}
+
+@function text-color($bg, $dark, $light) {
+  $lightness: color.channel($bg, "lightness", $space: oklch);
+
+  @if $lightness > 60% {
+    @return $dark;
+  }
+
+  @return $light;
+}

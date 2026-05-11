@@ -1,20 +1,45 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
 
-/**
- * Import dependencies
- */
-@use "dependencies";
+/* Settings */
+@use "settings/variables";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
 
+/* Tools */
+@use "tools/functions";
+@use "tools/mixins";
+
+/* Bootstrap */
+@use "dependencies/bootstrap";
+
+/* Generic */
+@use "generic/reset";
+@use "generic/base";
+@use "generic/tokens";
+
+/* Elements */
+@use "elements/typography";
+
+/* Objects */
+@use "objects/container";
+
+/* Components */
+@use "components/btn";
+@use "components/speaker-card";
+@use "components/header";
+@use "components/footer";
+@use "components/forms";
+@use "components/accordion";
+
+/* Layouts */
 @use "layouts/home";
+@use "layouts/speakers";
+@use "layouts/article";
+@use "layouts/extra";
 
-/**
- * Do NOT include anything else in this file!
- */
+
+/* Utilities */
+@use "utilities/visually-hidden";
+@use "utilities/styleguide";
+
+/* External dependencies */
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+

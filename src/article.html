@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fet a Mà | Jornadas de artesanía</title>
+    <meta
+      name="description"
+      content="Portada en formato póster para unas jornadas de artesanía, creada con Sass, Bootstrap 5 y CSS Grid.">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+
+    <!-- JS -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </head>
+
+
+   <body>
+    <include src="./views/header.html"></include>
+
+    <main class="article-page layout-container">
+
+      <article class="article">
+
+        <header class="article__hero">
+          <p class="article__kicker eyebrow">
+            Jornadas de artesanía
+          </p>
+
+          <h1 class="article__title type-xl">
+            Crear con las manos en un mundo cada vez más digital
+          </h1>
+
+          <p class="article__intro type-base">
+            Las jornadas Fet a Mà reúnen a profesionales de la cerámica,
+            la madera, el textil y el diseño para reflexionar sobre el valor
+            de los oficios artesanales en la cultura contemporánea.
+          </p>
+
+          <p class="article__author type-sm">
+            Por Equipo Fet a Mà
+          </p>
+        </header>
+
+        <figure class="article__figure article__figure--wide">
+      <picture>
+    <source
+      type="image/avif"
+      srcset="
+        ./assets/images/poster-2.jpg?as=avif&width=600 600w,
+        ./assets/images/poster-2.jpg?as=avif&width=1200 1200w
+      "
+    >
+
+    <source
+      type="image/webp"
+      srcset="
+        ./assets/images/poster-2.jpg?as=webp&width=600 600w,
+        ./assets/images/poster-2.jpg?as=webp&width=1200 1200w
+      "
+    >
+
+    <img
+      class="poster-image__img"
+      src="./assets/images/poster-2.jpg?width=1200"
+      alt="Imagen representativa de una pieza artesanal"
+      width="1200"
+      height="1600"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </picture>
+          <figcaption class="type-sm">
+            Identidad visual de las jornadas Fet a Mà.
+          </figcaption>
+        </figure>
+
+        <section class="article__body">
+
+          <p class="type-base">
+            Durante tres días, el encuentro propone una mirada abierta hacia
+            los procesos manuales, los materiales naturales y la transmisión
+            de conocimiento entre generaciones. La programación combina charlas,
+            talleres y demostraciones en directo.
+          </p>
+
+          <p class="type-base">
+            El objetivo principal es acercar la artesanía al público general,
+            mostrando que no se trata solo de una práctica tradicional, sino
+            también de una forma actual de pensar el diseño, la sostenibilidad
+            y la producción local.
+          </p>
+
+          <blockquote class="article__quote type-lg">
+            “La artesanía no mira únicamente al pasado: también propone otra
+            manera de imaginar el futuro.”
+          </blockquote>
+
+          <p class="type-base">
+            Las ponencias abordarán temas como el uso responsable de los
+            recursos, la recuperación de técnicas olvidadas y la colaboración
+            entre artesanos, diseñadores y comunidades locales.
+          </p>
+
+<figure class="article__figure">
+  <picture>
+    <source
+      type="image/avif"
+      srcset="
+        ./assets/images/poster-1.jpg?as=avif&width=600 600w,
+        ./assets/images/poster-1.jpg?as=avif&width=1200 1200w
+      "
+    >
+
+    <source
+      type="image/webp"
+      srcset="
+        ./assets/images/poster-1.jpg?as=webp&width=600 600w,
+        ./assets/images/poster-1.jpg?as=webp&width=1200 1200w
+      "
+    >
+
+    <img
+      class="poster-image__img"
+      src="./assets/images/poster-1.jpg?width=1200"
+      alt="Imagen representativa de una pieza artesanal"
+      width="1200"
+      height="1600"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </picture>
+    <figcaption class="type-sm">
+              La identidad gráfica utiliza formas simples, color y contraste.
+            </figcaption>
+</figure>
+
+
+
+
+          <h2 class="article__subtitle type-lg">
+            Qué encontrarás en las jornadas
+          </h2>
+
+          <ul class="article__list type-base">
+            <li>
+              Charlas con artesanos y diseñadores invitados.
+            </li>
+            <li>
+              Talleres prácticos sobre materiales y procesos manuales.
+            </li>
+            <li>
+              Espacios de encuentro para compartir experiencias.
+            </li>
+          </ul>
+
+          <p class="type-base">
+            Además de las actividades principales, el programa incluye una zona
+            expositiva donde se podrán conocer piezas, prototipos y proyectos
+            desarrollados por los participantes.
+          </p>
+
+        </section>
+
+      </article>
+
+    </main>
+
+    <include src="./views/footer.html"></include>
+  </body>
+</html> 

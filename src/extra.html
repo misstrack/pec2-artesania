@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fet a Mà | Contacto</title>
+
+    <meta
+      name="description"
+      content="Formulario de contacto para las jornadas de artesanía Fet a Mà."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </head>
+
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="contact-page layout-container">
+      <header class="contact-hero">
+        <p class="eyebrow">Contacto</p>
+
+        <h1 class="contact-hero__title type-xl">
+          Reserva tu plaza en Fet a Mà
+        </h1>
+
+        <p class="contact-hero__text type-base">
+          Escríbenos para resolver dudas, recibir información sobre el programa
+          o apuntarte a las actividades de las jornadas.
+        </p>
+      </header>
+
+      <section class="contact-layout" aria-label="Formulario de contacto">
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="contact-form__intro">
+            <h2 class="type-lg">Inscripción</h2>
+            <p class="type-base">
+              Completa el formulario y te responderemos con la información
+              necesaria para participar.
+            </p>
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="name">Nombre</label>
+            <input
+              class="contact-form__control"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="email">
+              Correo electrónico
+            </label>
+            <input
+              class="contact-form__control"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nombre@email.com"
+              required
+            />
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="activity">
+              Actividad de interés
+            </label>
+            <select
+              class="contact-form__select"
+              id="activity"
+              name="activity"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="ceramica">Taller de cerámica</option>
+              <option value="madera">Taller de madera</option>
+              <option value="textil">Taller textil</option>
+              <option value="charlas">Charlas y mesas redondas</option>
+            </select>
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="message">Mensaje</label>
+            <textarea
+              class="contact-form__control contact-form__textarea"
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Cuéntanos qué necesitas"
+            ></textarea>
+          </div>
+
+          <button class="btn contact-form__button" type="submit">
+            Enviar solicitud
+          </button>
+        </form>
+
+        <aside class="contact-info" aria-label="Información práctica">
+          <div class="contact-info__card">
+            <i
+              class="fa-solid fa-location-dot contact-info__icon"
+              aria-hidden="true"
+            ></i>
+
+            <div class="contact-info__content">
+              <h2 class="contact-info__title type-md">Dónde</h2>
+              <p class="contact-info__text type-base">
+                Centre Cultural La Marina, Castelló de la Plana.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__card">
+            <i
+              class="fa-solid fa-calendar-days contact-info__icon"
+              aria-hidden="true"
+            ></i>
+
+            <div class="contact-info__content">
+              <h2 class="contact-info__title type-md">Cuándo</h2>
+              <p class="contact-info__text type-base">
+                Del 18 al 20 de octubre, con talleres de mañana y tarde.
+              </p>
+            </div>
+          </div>
+
+       
+        </aside>
+      </section>
+
+      <section class="contact-faq" aria-labelledby="contact-faq-title">
+        <h2 class="contact-faq__title type-lg" id="contact-faq-title">
+          Preguntas frecuentes
+        </h2>
+
+        <div class="accordion contact-faq__accordion" id="contactFaq">
+          <div class="accordion-item contact-faq__item">
+            <h3 class="accordion-header contact-faq__header" id="faqOne">
+              <button
+                class="accordion-button contact-faq__button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#answerOne"
+                aria-expanded="true"
+                aria-controls="answerOne"
+              >
+                ¿Necesito experiencia previa?
+              </button>
+            </h3>
+
+            <div
+              id="answerOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="faqOne"
+              data-bs-parent="#contactFaq"
+            >
+              <div class="accordion-body contact-faq__body">
+                No. Las actividades están pensadas para personas con distintos
+                niveles de experiencia.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item contact-faq__item">
+            <h3 class="accordion-header contact-faq__header" id="faqTwo">
+              <button
+                class="accordion-button collapsed contact-faq__button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#answerTwo"
+                aria-expanded="false"
+                aria-controls="answerTwo"
+              >
+                ¿Los materiales están incluidos?
+              </button>
+            </h3>
+
+            <div
+              id="answerTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqTwo"
+              data-bs-parent="#contactFaq"
+            >
+              <div class="accordion-body contact-faq__body">
+                Sí. Cada taller incluye los materiales básicos necesarios para
+                desarrollar la actividad.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item contact-faq__item">
+            <h3 class="accordion-header contact-faq__header" id="faqThree">
+              <button
+                class="accordion-button collapsed contact-faq__button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#answerThree"
+                aria-expanded="false"
+                aria-controls="answerThree"
+              >
+                ¿Puedo asistir solo a las charlas?
+              </button>
+            </h3>
+
+            <div
+              id="answerThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqThree"
+              data-bs-parent="#contactFaq"
+            >
+              <div class="accordion-body contact-faq__body">
+                Sí. Puedes inscribirte únicamente a las charlas, a los talleres
+                o a ambas modalidades.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+  </body>
+</html>

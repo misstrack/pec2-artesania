@@ -1,0 +1,31 @@
+@use "../globals" as *;
+
+html {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100dvh;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 0.025), transparent),
+    $color-background;
+  color: $color-text;
+  font-family: $font-base;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+}
+
+figure{
+  margin: 0;
+}

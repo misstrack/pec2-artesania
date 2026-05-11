@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "selector-class-pattern": "^[a-z]+(-[a-z]+)*(__[a-z]+(-[a-z]+)*)?(--[a-z]+(-[a-z]+)*)?$",
+    "color-function-notation": "modern",
+    "alpha-value-notation": "number",
+    "no-descending-specificity": null,
+    "selector-max-id": 0,
+    "max-nesting-depth": 3
+  }
+}

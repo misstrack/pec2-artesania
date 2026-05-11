@@ -1,0 +1,34 @@
+<article class="speaker-card card">
+   <figure class="speaker-card__media">
+    <img
+      class="speaker-card__image"
+      src="{{image}}"
+      alt="{{alt}}"
+      width="800"
+      height="1000"
+      loading="lazy"
+      decoding="async"
+    >
+  </figure>
+
+  <div class="speaker-card__content card-body">
+    <p class="speaker-card__role eyebrow">
+      {{ role }}
+    </p>
+
+    <h2 class="speaker-card__title card-title type-md">
+      {{ name }}
+    </h2>
+
+    <p class="speaker-card__text card-text type-base ">
+      {{ text }}
+    </p>
+
+    <a
+      class="speaker-card__link interactive-link btn"
+      href="./article.html"
+    >
+      Leer más
+    </a>
+  </div>
+</article>

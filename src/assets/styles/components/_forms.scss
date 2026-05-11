@@ -1,0 +1,54 @@
+@use "../globals" as *;
+
+.contact-form {
+  display: grid;
+  gap: $space-sm;
+  padding: $space-md;
+  border: 1px solid $color-line;
+  border-radius: 1.5rem;
+  background: $color-surface;
+  box-shadow: 0 1rem 2rem color-mix(in oklch, $color-ink 8%, transparent);
+
+  &__intro {
+    margin-bottom: $space-sm;
+  }
+
+  &__field {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  &__label {
+    font-weight: 650;
+  }
+
+  &__control,
+  &__select {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid $color-line;
+    border-radius: 0.85rem;
+    background: white;
+    color: $color-text;
+    font: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: $color-accent;
+      box-shadow: 0 0 0 0.25rem
+        color-mix(in oklch, $color-accent 18%, transparent);
+    }
+  }
+
+  &__textarea {
+    min-height: 9rem;
+    resize: vertical;
+    border-radius: 1rem;
+  }
+
+  &__button {
+    width: fit-content;
+    margin-top: $space-xs;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../settings/variables" as *;
+
+/* Bootstrap necesita valores legacy/fijos para sus cálculos internos */
+
+$primary: #ff6b35;
+$secondary: #29c46a;
+$success: #29c46a;
+$warning: #f2c94c;
+$danger: #d94f3d;
+$body-bg: #fffaf0;
+$body-color: #252336;
+$font-family-base: $font-base;
+$font-size-base: 1rem;
+$small-font-size: 0.875rem;
+$lead-font-size: 1.25rem;
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+$line-height-base: 1.5;
+$navbar-brand-font-size: 1.25rem;
+$navbar-brand-height: 2rem;
+$border-color: #d8d3ca;
+$border-radius: 1rem;
+$border-radius-sm: 0.75rem;
+$border-radius-lg: 1.5rem;
+$btn-border-radius: 999px;
+$btn-padding-x: 1.25rem;
+$btn-padding-y: 0.7rem;
+$btn-font-weight: 700;
+$input-border-color: #d8d3ca;
+$input-border-radius: 0.85rem;
+$input-focus-border-color: #ff6b35;
+$accordion-border-color: #d8d3ca;
+$accordion-border-radius: 1rem;
+$accordion-inner-border-radius: 1rem;
+$accordion-button-active-bg: #ffe2d3;
+$accordion-button-active-color: #9a3412;
+
+@import "bootstrap/scss/bootstrap";

@@ -1,0 +1,74 @@
+@use "../globals" as *;
+
+  .speakers {
+    padding-block: $space-lg;
+
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: $space-md;
+      margin:$space-md 0;
+    }
+  }
+
+.speaker-card {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid $color-line;
+  border-radius: 1.5rem;
+  background: $color-surface;
+  box-shadow: 0 1rem 2rem color-mix(in oklch, $color-ink 8%, transparent);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1.5rem 3rem color-mix(in oklch, $color-ink 12%, transparent);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background: color-mix(in oklch, $color-accent 10%, white);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    padding: $space-md;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-text;
+  }
+}
+
+  @media (width >= 640px) {
+    .speakers {
+      &__grid {
+        flex-flow: row wrap;
+  
+      }
+    }
+
+    .speaker-card {
+      flex: 1 1 calc(50% - #{$space-md});
+    }
+  }
+
+  @media (width >= 992px) {
+    .speakers {
+      padding-block: $space-xl;
+    }
+
+    .speaker-card {
+      flex: 0 1 calc(33.3% - #{$space-md});
+  
+    }
+  }

@@ -1,0 +1,39 @@
+@use "../globals" as *;
+
+/* Fallback sRGB */
+:root {
+  --color-background: #{to-srgb($color-background)};
+  --color-surface: #{to-srgb($color-surface)};
+  --color-text: #{to-srgb($color-text)};
+  --color-muted: #{to-srgb($color-muted)};
+  --color-accent: #{to-srgb($color-accent)};
+  --color-accent-soft: #{to-srgb($color-accent-soft)};
+  --color-accent-dark: #{to-srgb($color-accent-dark)};
+  --color-accent-secondary: #{to-srgb($color-accent-secondary)};
+  --color-secondary-soft: #{to-srgb($color-secondary-soft)};
+  --color-accent-tertiary: #{to-srgb($color-accent-tertiary)};
+  --color-tertiary-soft: #{to-srgb($color-tertiary-soft)};
+  --color-ink: #{to-srgb($color-ink)};
+  --color-paper: #{to-srgb($color-paper)};
+  --color-line: #{to-srgb($color-line)};
+}
+
+/* Modern browsers with OKLCH support */
+@supports (color: oklch(50% 0.1 100)) {
+  :root {
+    --color-background: #{$color-background};
+    --color-surface: #{$color-surface};
+    --color-text: #{$color-text};
+    --color-muted: #{$color-muted};
+    --color-accent: #{$color-accent};
+    --color-accent-soft: #{$color-accent-soft};
+    --color-accent-dark: #{$color-accent-dark};
+    --color-accent-secondary: #{$color-accent-secondary};
+    --color-secondary-soft: #{$color-secondary-soft};
+    --color-accent-tertiary: #{$color-accent-tertiary};
+    --color-tertiary-soft: #{$color-tertiary-soft};
+    --color-ink: #{$color-ink};
+    --color-paper: #{$color-paper};
+    --color-line: #{$color-line};
+  }
+}

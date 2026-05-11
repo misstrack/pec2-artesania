@@ -1,0 +1,50 @@
+@use "../globals" as *;
+
+.style-guide__swatches {
+  display: flex;
+  gap: $space-md;
+}
+
+.style-guide__swatch {
+  padding: $space-md;
+  border-radius: 8px;
+  font-size: $font-size-sm;
+}
+
+.style-guide__swatch--background {
+  background: $color-background;
+}
+
+.style-guide__swatch--surface {
+  background: $color-surface;
+}
+
+.style-guide__swatch--accent {
+  background: $color-accent;
+  color: white;
+}
+
+.style-guide__swatch--text {
+  background: $color-text;
+  color: white;
+}
+
+.style-guide__spacing {
+  display: flex;
+  gap: $space-md;
+}
+
+.space-box {
+  background: $color-accent-soft;
+}
+
+.space-xs { padding: $space-xs; }
+.space-sm { padding: $space-sm; }
+.space-md { padding: $space-md; }
+.space-lg { padding: $space-lg; }
+.space-xl { padding: $space-xl; }
+
+.o-container {
+  width: min(100% - $space-md, $container-width);
+  margin-inline: auto;
+}

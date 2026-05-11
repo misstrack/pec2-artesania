@@ -1,0 +1,90 @@
+@use "../globals" as *;
+
+
+
+  // PRIMARY BUTTON
+  .btn-poster {
+    --bs-btn-color: #{text-color($color-ink, $color-text, $color-surface)};
+    --bs-btn-bg: #{$color-ink};
+    --bs-btn-border-color: #{$color-ink};
+    --bs-btn-hover-color:
+      #{text-color($color-accent-secondary, $color-text, $color-surface)};
+    --bs-btn-hover-bg: #{$color-accent-secondary};
+    --bs-btn-hover-border-color: #{$color-accent-secondary};
+    --bs-btn-focus-shadow-rgb: 255, 107, 53;
+
+    border-radius: 0;
+    font-weight: 800;
+  }
+
+.btn { width: fit-content;
+      margin-top: auto;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      background: color-mix(in oklch, $color-accent 14%, white);
+
+      &:hover {
+        background: 
+            color-mix(in oklch, $color-accent 20%, white);  }}
+
+
+  // INTERACTIVE LINKS
+.interactive-link {
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    translate 180ms ease,
+    border-color 180ms ease;
+
+  &:not(.interactive-link--active):is(:hover, :focus-visible) {
+    background:
+      color-mix(in oklch, $color-accent 14%, white);
+    translate: 0.15rem 0;
+  }
+}
+
+
+  
+  .interactive-link--active {
+    background:
+      color-mix(in oklch, $color-accent 14%, white);
+    pointer-events: none;
+  }
+
+  // INTERACTIVE CIRCLE
+  .interactive-circle {
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+
+    &:is(:hover, :focus-visible) {
+      border-color: currentcolor;
+      background:
+        color-mix(in oklch, $color-accent 14%, white);
+      transform: translateY(-2px);
+    }
+  }
+
+  // BADGES
+  .poster-badge {
+    width: max-content;
+    padding: $space-xs $space-sm;
+    border: 1px solid $color-line;
+    border-radius: 999px;
+    color: $color-text;
+    font-weight: 800;
+  }
+
+  // SMALL LABELS
+  :is(.eyebrow, .poster-kicker) {
+    color: $color-accent;
+    font-size: $font-size-xs;
+    font-weight: 850;
+    text-transform: uppercase;
+  }
+
+
+

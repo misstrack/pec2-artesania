@@ -1,36 +1,246 @@
 <!doctype html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fet a Mà | Jornadas de artesanía</title>
+    <meta
+      name="description"
+      content="Portada en formato póster para unas jornadas de artesanía, creada con Sass, Bootstrap 5 y CSS Grid.">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
+
+    <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
+
+    <!-- JS -->
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
+  </head>
+
+
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main>
+      <section class="poster-hero" aria-labelledby="poster-title">
+        <div class="poster-grid">
+          <h4 class="poster-kicker">
+            Jornadas municipales de artesanía contemporánea
+          </h4>
+     <div class="poster-title-block">
+            <span class="badge text-bg-light poster-badge">
+              Entrada libre
+            </span>
+
+            <h1 id="poster-title" class="type-xxl">
+              Manos que piensan la materia
+            </h1>
+
+            <p>
+              Tres días de charlas, talleres y demostraciones para descubrir cómo
+              la artesanía local conversa con el diseño, la sostenibilidad y la ciudad.
+            </p>
+               <a class="poster-ticket btn" href="#programa">
+            Ver programa
+          </a>
+          </div>
+          <div class="poster-date">
+            <span>18-20</span>
+            <small>Octubre · 2026</small>
+          </div>
+
+          <div class="poster-place">
+       <i
+              class="fa-solid fa-location-dot contact-info__icon"
+              aria-hidden="true"
+            ></i>
+            <span>  Centre Cultural La Marina, Castelló de la Plana. </span>
+          </div>
+
+<figure class="poster-image poster-image-main">
+  <picture>
+    <source
+      type="image/avif"
+      srcset="
+        ./assets/images/poster-1.jpg?as=avif&width=600 600w,
+        ./assets/images/poster-1.jpg?as=avif&width=1200 1200w
+      "
+    >
+
+    <source
+      type="image/webp"
+      srcset="
+        ./assets/images/poster-1.jpg?as=webp&width=600 600w,
+        ./assets/images/poster-1.jpg?as=webp&width=1200 1200w
+      "
+    >
+
+    <img
+      class="poster-image__img"
+      src="./assets/images/poster-1.jpg?width=1200"
+      alt="Imagen representativa de una pieza artesanal"
+      width="1200"
+      height="1600"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </picture>
+</figure>
+
+<figure class="poster-image poster-image-small">
+  <picture>
+    <source
+      type="image/avif"
+      srcset="
+        ./assets/images/poster-3.jpg?as=avif&width=400 400w,
+        ./assets/images/poster-3.jpg?as=avif&width=800 800w
+      "
+    >
+
+    <source
+      type="image/webp"
+      srcset="
+        ./assets/images/poster-3.jpg?as=webp&width=400 400w,
+        ./assets/images/poster-3.jpg?as=webp&width=800 800w
+      "
+    >
+
+    <img
+      class="poster-image__img"
+      src="./assets/images/poster-3.jpg?width=800"
+      alt="Mesa de trabajo con materiales artesanales"
+      width="800"
+      height="600"
+      loading="lazy"
+      decoding="async"
+    >
+  </picture>
+</figure>
+
+     
+
+       
+
+          <aside class="poster-panel poster-panel-talks">
+            <span class="panel-number">12</span>
+            <h2>Charlas</h2>
+            <p>Cerámica, cestería, joyería, madera y nuevos oficios.</p>
+          </aside>
+
+          <aside class="poster-panel poster-panel-workshops">
+            <span class="panel-number">08</span>
+            <h2>Talleres</h2>
+            <p>Sesiones prácticas para todos los niveles.</p>
+          </aside>
+
+          <div class="poster-line" aria-hidden="true"></div>
+        </div>
+      </section>
+
+<section class="program-strip" id="programa" aria-labelledby="program-title">
+  <div class="section-shell">
+    <div class="program-heading">
+      <p class="eyebrow">Programa destacado</p>
+
+      <h2 class="program-heading__title" id="program-title">
+        Un resumen compacto para completar la portada.
+      </h2>
+    </div>
+
+    <div class="accordion program-accordion" id="programAccordion">
+      <div class="accordion-item program-accordion__item">
+        <h3 class="accordion-header program-accordion__header" id="programDayOne">
+          <button
+            class="accordion-button program-accordion__button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#dayOne"
+            aria-expanded="true"
+            aria-controls="dayOne"
+          >
+            Viernes · Oficios y territorio
+          </button>
+        </h3>
+
+        <div
+          id="dayOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="programDayOne"
+          data-bs-parent="#programAccordion"
+        >
+          <div class="accordion-body program-accordion__body">
+            Apertura institucional, mesa redonda sobre producción local y
+            demostración de torno.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item program-accordion__item">
+        <h3 class="accordion-header program-accordion__header" id="programDayTwo">
+          <button
+            class="accordion-button collapsed program-accordion__button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#dayTwo"
+            aria-expanded="false"
+            aria-controls="dayTwo"
+          >
+            Sábado · Talleres abiertos
+          </button>
+        </h3>
+
+        <div
+          id="dayTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="programDayTwo"
+          data-bs-parent="#programAccordion"
+        >
+          <div class="accordion-body program-accordion__body">
+            Iniciación a la cerámica, fibras vegetales, estampación textil y
+            reparación creativa.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item program-accordion__item">
+        <h3 class="accordion-header program-accordion__header" id="programDayThree">
+          <button
+            class="accordion-button collapsed program-accordion__button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#dayThree"
+            aria-expanded="false"
+            aria-controls="dayThree"
+          >
+            Domingo · Mercado y comunidad
+          </button>
+        </h3>
+
+        <div
+          id="dayThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="programDayThree"
+          data-bs-parent="#programAccordion"
+        >
+          <div class="accordion-body program-accordion__body">
+            Mercado de piezas únicas, concierto acústico y cierre con lectura
+            colectiva de conclusiones.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <include src="./views/footer.html"></include>
   </body>
+  
 </html>

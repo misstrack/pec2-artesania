@@ -1,16 +1,26 @@
-/**
- * Import dependencies from node_modules
- * see commented examples below
- */
+import "bootstrap";
 
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
+const nav = document.querySelector(".nav-main");
+const toggle = document.querySelector(".nav-main__toggle");
 
-/**
- * Write any other JavaScript below
- */
+if (nav && toggle) {
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("nav-main--open");
 
-+(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-})();
+    toggle.setAttribute("aria-expanded", isOpen);
+    toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  });
+}
+
+const currentPath = window.location.pathname.split("/").pop() || "index.html";
+const navLinks = document.querySelectorAll(".nav-main__link");
+
+navLinks.forEach((link) => {
+  const linkPath = link.getAttribute("href").split("/").pop();
+
+  link.classList.remove("interactive-link--active");
+
+  if (linkPath === currentPath) {
+    link.classList.add("interactive-link--active");
+  }
+});

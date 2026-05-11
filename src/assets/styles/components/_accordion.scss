@@ -1,0 +1,33 @@
+@use "../globals" as *;
+
+.contact-faq {
+  margin-top: $space-lg;
+  padding: $space-md;
+  border: 1px solid $color-line;
+  border-radius: 1.5rem;
+  background: $color-surface;
+  box-shadow: 0 1rem 2rem color-mix(in oklch, $color-ink 8%, transparent);
+
+  &__title {
+    margin-bottom: $space-md;
+    letter-spacing: -0.04em;
+  }
+
+  &__accordion {
+    --bs-accordion-border-color: #{$color-line};
+    --bs-accordion-border-radius: 1rem;
+    --bs-accordion-inner-border-radius: 1rem;
+    --bs-accordion-btn-padding-x: 1rem;
+    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-body-padding-x: 1rem;
+    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-active-bg: color-mix(in oklch, #{$color-accent} 12%, white);
+    --bs-accordion-active-color: #{$color-accent-dark};
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem
+      color-mix(in oklch, #{$color-accent} 18%, transparent);
+  }
+
+  &__button {
+    font-weight: 750;
+  }
+}

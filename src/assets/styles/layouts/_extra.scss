@@ -1,0 +1,74 @@
+@use "../globals" as *;
+
+.contact-page {
+  container-type: inline-size;
+  padding-block: $space-xl;
+}
+
+.contact-hero {
+  display: grid;
+  align-content: center;
+  gap: $space-sm;
+  max-width: 58rem;
+  min-height: 35dvh;
+
+  &__title {
+    max-width: 10ch;
+    letter-spacing: -0.06em;
+  }
+
+  &__text {
+    max-width: 52rem;
+  }
+}
+
+.contact-layout {
+  display: grid;
+  gap: $space-md;
+}
+
+.contact-info {
+  display: grid;
+  gap: $space-md;
+
+  &__card {
+    display: flex;
+    gap: $space-md;
+    align-items: flex-start;
+    padding: $space-md;
+    border: 1px solid $color-line;
+    border-radius: 1.5rem;
+    background: $color-surface;
+    box-shadow: 0 1rem 2rem color-mix(in oklch, $color-ink 8%, transparent);
+  }
+
+  &__icon {
+    display: grid;
+    width: clamp(2.5rem, 8cqi, 4rem);
+    aspect-ratio: 1;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: color-mix(in oklch, $color-accent 14%, white);
+    color: $color-accent-dark;
+  }
+
+  &__alert {
+    margin: 0;
+    border: 1px solid $color-warning;
+    border-radius: 1.5rem;
+    background: color-mix(in oklch, $color-warning 18%, white);
+    color: $color-text;
+  }
+}
+
+@container (min-width: 52rem) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+    align-items: start;
+  }
+
+  .contact-hero__title {
+    max-width: 12ch;
+  }
+}

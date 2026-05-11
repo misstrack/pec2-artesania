@@ -1,0 +1,115 @@
+@use "../globals" as *;
+
+.site-footer {
+  margin-top: $space-xl;
+  padding-block: $space-lg;
+  border-top: 1px solid $color-line;
+
+
+
+  &__inner {
+    margin-inline: auto;
+  }
+
+  // TOP CLAIM
+  &__claim {
+    max-width: 42rem;
+    margin: 0 auto $space-lg;
+    color: $color-accent;
+    font-size: $font-size-md;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  // MAIN CONTENT
+  &__content {
+    display: grid;
+    gap: $space-md;
+    padding-top: $space-md;
+    border-top: 1px solid $color-line;
+  }
+
+  // BRAND
+  &__brand {
+    justify-self: center;
+  }
+
+  // NAVIGATION
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.9rem 1rem;
+    border-radius: 999px;
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  // SOCIAL
+  &__social-list {
+    display: flex;
+    gap: $space-sm;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__social-link {
+    display: grid;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid $color-line;
+    border-radius: 999px;
+    background: $color-surface;
+    color: $color-text;
+    text-decoration: none;
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease,
+      background 180ms ease;
+
+    &:is(:hover, :focus-visible) {
+      color: $color-accent;
+      border-color: currentcolor;
+      background:
+        color-mix(in oklch, $color-accent 8%, white);
+      transform: translateY(-2px);
+    }
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  // TABLET / DESKTOP
+  @media (width >= 768px) {
+    &__content {
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: $space-md;
+    }
+
+    &__brand {
+      justify-self: start;
+    }
+
+    &__nav {
+      flex-direction: row;
+      justify-content: center;
+      gap: $space-md;
+    }
+
+    &__social-list {
+      justify-content: end;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fet a Mà | Jornadas de artesanía</title>
+    <meta
+      name="description"
+      content="Portada en formato póster para unas jornadas de artesanía, creada con Sass, Bootstrap 5 y CSS Grid.">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+
+    <!-- JS -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </head>
+
+
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="speakers layout-container">
+      <header class="page-hero">
+        <h1 class="page-hero__title type-xl">Speakers</h1>
+        <p class="page-hero__text type-base">
+          Profesionales del diseño, la cerámica, la madera, el textil y la creación artesanal compartirán sus procesos.
+        </p>
+      </header>
+
+
+
+
+<section class="speakers__grid">
+
+  <include
+    src="./views/speaker-card.html"
+    locals='{
+      "image": "./assets/images/profile-1.jpg?as=webp&width=800",
+      "alt": "Clara Vidal trabajando con cerámica",
+      "role": "Cerámica contemporánea",
+      "name": "Clara Vidal",
+      "text": "Artesana especializada en técnicas de barro y esmaltes naturales aplicados al diseño actual."
+    }'
+  ></include>
+
+  <include
+    src="./views/speaker-card.html"
+    locals='{
+      "image": "./assets/images/profile-1.jpg?as=webp&width=800",
+      "alt": "Marcos Serra tallando madera",
+      "role": "Ebanistería artesanal",
+      "name": "Marcos Serra",
+      "text": "Diseñador de mobiliario que combina procesos manuales tradicionales y materiales sostenibles."
+    }'
+  ></include>
+
+  <include
+    src="./views/speaker-card.html"
+    locals='{
+      "image": "./assets/images/profile-1.jpg?as=webp&width=800",
+      "alt": "Lucía Ferrer trabajando en un telar",
+      "role": "Textil y tintes naturales",
+      "name": "Lucía Ferrer",
+      "text": "Investigadora y creadora textil centrada en técnicas de tejido artesanal y pigmentos orgánicos."
+    }'
+  ></include>
+
+  <include
+    src="./views/speaker-card.html"
+    locals='{
+      "image": "./assets/images/profile-1.jpg?as=webp&width=800",
+      "alt": "Nora Esteve diseñando piezas de vidrio",
+      "role": "Vidrio soplado",
+      "name": "Nora Esteve",
+      "text": "Artista especializada en vidrio contemporáneo y procesos experimentales de fabricación manual."
+    }'
+  ></include>
+
+  <include
+    src="./views/speaker-card.html"
+    locals='{
+      "image": "./assets/images/profile-1.jpg?as=webp&width=800",
+      "alt": "Lucía Ferrer trabajando en un telar",
+      "role": "Textil y tintes naturales",
+      "name": "Lucía Ferrer",
+      "text": "Investigadora y creadora textil centrada en técnicas de tejido artesanal y pigmentos orgánicos."
+    }'
+  ></include>
+
+  <include
+    src="./views/speaker-card.html"
+    locals='{
+      "image": "./assets/images/profile-1.jpg?as=webp&width=800",
+      "alt": "Nora Esteve diseñando piezas de vidrio",
+      "role": "Vidrio soplado",
+      "name": "Nora Esteve",
+      "text": "Artista especializada en vidrio contemporáneo y procesos experimentales de fabricación manual."
+    }'
+  ></include>
+
+</section>
+
+
+    </main>
+
+    <include src="./views/footer.html"></include>
+  </body>
+</html>
