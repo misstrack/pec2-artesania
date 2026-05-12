@@ -53,25 +53,30 @@
   img {
     display: block;
     width: 100%;
-    object-fit: cover;
     height: 100%;
+    min-height: 12rem;
+    object-fit: cover;
     object-position: bottom;
   }
 }
 
 .poster-title-block {
+  position: relative;
+  z-index: 3;
   background: color-mix(in oklch, $color-paper 90%, white);
 
-  h1{
-      text-wrap: balance;
-  max-width: 15ch;
+  h1 {
+    text-wrap: balance;
+    max-width: 15ch;
+    line-height: 0.9;
+    font-size: clamp(4rem, 10cqi, 8rem);
   }
 
   p {
     color: color-mix(in oklch, $color-text 76%, white);
     font-weight: 600;
-      text-wrap: balance;
-  max-width: 80ch;
+    text-wrap: balance;
+    max-width: 80ch;
   }
 }
 
@@ -107,9 +112,8 @@
 
 @media (width >= 56rem) {
   .poster-hero {
-    height: calc(100dvh - 4.5rem);
+    min-height: calc(100dvh - 4.5rem);
     padding: $space-md;
-    overflow: hidden;
   }
 
   @supports (display: grid) {
@@ -122,14 +126,13 @@
         minmax(8rem, 0.78fr)
         minmax(1rem, 0.32fr);
       grid-template-rows:
-        minmax(4rem, auto)
-        minmax(9rem, 0.6fr)
-        minmax(9rem, 0.8fr)
-        minmax(7rem, 0.45fr)
-        minmax(4rem, auto);
+        auto
+        minmax(10rem, auto)
+        minmax(14rem, auto)
+        minmax(10rem, auto)
+        auto;
       gap: 0;
-      max-height: 100%;
-      overflow: hidden;
+      height: auto;
     }
 
     .poster-kicker {
@@ -145,7 +148,7 @@
     .poster-place {
       grid-column: 4 / 6;
       grid-row: 2;
-      z-index: 990;
+      z-index: 2;
     }
 
     .poster-image-main {
@@ -161,13 +164,15 @@
     .poster-title-block {
       grid-column: 2 / 4;
       grid-row: 3 / 5;
-      z-index: 2;
+      z-index: 3;
+      margin-bottom: 4rem;
     }
 
     .poster-ticket {
       grid-column: 4 / 5;
       grid-row: 4;
       place-self: end stretch;
+      z-index: 4;
     }
 
     .poster-panel-talks {
@@ -178,6 +183,7 @@
     .poster-panel-workshops {
       grid-column: 3 / 6;
       grid-row: 5;
+      padding-top: 5rem;
     }
 
     .poster-line {
